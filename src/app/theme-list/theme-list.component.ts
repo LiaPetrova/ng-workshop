@@ -9,7 +9,7 @@ import { ThemeService } from '../theme.service';
 })
 export class ThemeListComponent implements OnInit {
 
-  themeList: ITheme[] | undefined;
+  themeList: ITheme[] | null = null;
 
   constructor(private themeService: ThemeService) { }
 
