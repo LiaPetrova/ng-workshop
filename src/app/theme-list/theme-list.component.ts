@@ -9,13 +9,15 @@ import { ThemeService } from '../theme.service';
 })
 export class ThemeListComponent implements OnInit {
 
-  themeList: ITheme[] = [];
+  themeList: ITheme[] | undefined;
 
   constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
     this.themeService.loadThemeList().subscribe(themeList => {
       this.themeList = themeList;
+      console.log(themeList);
+      
     })
   }
 
