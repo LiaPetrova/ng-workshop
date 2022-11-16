@@ -51,9 +51,10 @@ export class BrowserStorage {
   }
 }
 
+const source: { [key: string]: any } = {};
 export class ServerStorage {
   localStorage = {
-    data: {} as any,
+    data: source,
     setItem<T>(key: string, item: T): void {
       this.data[key] = item;
     },
